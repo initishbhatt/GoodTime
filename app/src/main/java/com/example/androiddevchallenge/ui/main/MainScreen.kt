@@ -45,6 +45,7 @@ import com.example.androiddevchallenge.ui.components.GoodTimeCircularIconButton
 import com.example.androiddevchallenge.ui.components.GoodTimeProgressBox
 import com.example.androiddevchallenge.ui.components.GoodTimeText
 import com.example.androiddevchallenge.ui.theme.malibu400
+import com.example.androiddevchallenge.ui.theme.yellow200
 
 @Composable
 fun MainScreen(viewModel: MainViewModel = viewModel()) {
@@ -91,6 +92,13 @@ fun MainContent(
             }
             item { ActionButtons(onPlayClicked, onStopClicked, isPlaying) }
             item {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_undraw_mindfulness_scgo),
+                    contentDescription = null, modifier = Modifier.padding(16.dp)
+                )
+            }
+            item {
+                Spacer(modifier = Modifier.padding(16.dp))
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -108,16 +116,10 @@ fun MainContent(
                         GoodTimeText(
                             value = it,
                             style = MaterialTheme.typography.h4,
-                            color = malibu400
+                            color = yellow200
                         )
                     }
                 }
-            }
-            item {
-                Image(
-                    painter = painterResource(id = R.drawable.ic_undraw_mindfulness_scgo),
-                    contentDescription = null, modifier = Modifier.padding(16.dp)
-                )
             }
         }
     )

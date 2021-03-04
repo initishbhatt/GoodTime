@@ -32,7 +32,7 @@ class MainViewModel : ViewModel() {
     var seconds by mutableStateOf(String.format(TIMER_FORMAT, 0))
     var isPlaying by mutableStateOf(false)
     var progress by mutableStateOf(1.00F)
-    var goodTimeText by mutableStateOf("Ready!!")
+    var goodTimeText by mutableStateOf("Ready for a good 10 minutes.")
     private var isPaused by mutableStateOf(false)
     private var countDownTimer: CountDownTimer? = null
 
@@ -87,7 +87,7 @@ class MainViewModel : ViewModel() {
             isPlaying = false
             countDownTimer?.cancel()
             resetTimerValues()
-            goodTimeText = "Ready!"
+            goodTimeText = "Ready for a good 10 minutes!"
         }
     }
 
@@ -111,6 +111,6 @@ class MainViewModel : ViewModel() {
         "The best meditation is a gentle awareness.",
         "Learn to slow down.",
         "Meditation is the art of doing nothing.",
-        "Relax!"
+        "Relax your mind."
     )
 }
