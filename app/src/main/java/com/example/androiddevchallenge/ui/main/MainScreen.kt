@@ -94,7 +94,7 @@ fun MainContent(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(48.dp)
+                        .height(60.dp)
                         .padding(horizontal = 16.dp)
                 ) {
                     Crossfade(
