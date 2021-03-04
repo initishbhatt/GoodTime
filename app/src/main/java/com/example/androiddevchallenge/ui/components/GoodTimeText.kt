@@ -13,24 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.ui.components
 
-import androidx.compose.material.Typography
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
 
-// Set of Material typography styles to start with
-val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    ),
-    h4 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Bold,
-        fontSize = 24.sp
+@Composable
+fun GoodTimeText(value: String, modifier: Modifier = Modifier, style: TextStyle, color: Color = Color.Black) {
+    Text(
+        text = value,
+        style = style,
+        modifier = modifier,
+        maxLines = 2,
+        color = color
     )
-)
+}
+
+@Composable
+fun GoodTimeDivider(modifier: Modifier = Modifier) {
+    Text(text = ":", modifier = modifier, style = MaterialTheme.typography.h4)
+}

@@ -13,12 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.ui.components
 
-import androidx.compose.ui.graphics.Color
+import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.example.androiddevchallenge.ui.theme.yellow400
 
-val purple700 = Color(0xFF3700B3)
-val malibu200 = Color(0xFF81D4FA)
-val malibu400 = Color(0xFF4BA3C7)
-val yellow200 = Color(0xFFFFEB46)
-val yellow400 = Color(0xFFFFC000)
+@Composable
+fun GoodTimeProgress(modifier: Modifier = Modifier, progress: Float) {
+    CircularProgressIndicator(modifier = modifier, progress = progress, color = yellow400, strokeWidth = 8.dp)
+}
